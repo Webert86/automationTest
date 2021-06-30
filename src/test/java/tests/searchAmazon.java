@@ -29,6 +29,7 @@ public class searchAmazon {
 
         WebDriver navegator = new ChromeDriver();
         navegator.get("https://www.google.com/");
+        navegator.manage().window().maximize();
         WebElement text = navegator.findElement(By.cssSelector("[name='q']"));
         text.sendKeys("Amazon");
         text.submit();
@@ -44,6 +45,7 @@ public class searchAmazon {
 
         WebDriver navegator = new ChromeDriver();
         navegator.get("https://www.google.com/");
+        navegator.manage().window().maximize();
         WebElement text = navegator.findElement(By.cssSelector("[name='q']"));
         text.sendKeys("Amazon");
         text.submit();
@@ -71,6 +73,4 @@ public class searchAmazon {
         assertThat(porcent, Matchers.greaterThan(80.0f));
         navegator.quit();
     }
-
-
 }

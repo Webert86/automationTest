@@ -17,7 +17,6 @@ public class acessarGoogle {
 
     @Before
     public void Setup(){
-
         System.setProperty("webdriver.chrome.driver", "C:\\temp\\Drivers\\chromedriver.exe");
     }
 
@@ -34,6 +33,7 @@ public class acessarGoogle {
 
         WebDriver navegator = new ChromeDriver();
         navegator.get("https://www.google.com/");
+        navegator.manage().window().maximize();
         WebElement text = navegator.findElement(By.cssSelector("[name='q']"));
         text.sendKeys("Amazon");
         text.submit();

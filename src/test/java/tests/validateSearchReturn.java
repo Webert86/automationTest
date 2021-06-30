@@ -25,6 +25,7 @@ public class validateSearchReturn {
 
         WebDriver navegator = new ChromeDriver();
         navegator.get("https://www.google.com/");
+        navegator.manage().window().maximize();
         WebElement text = navegator.findElement(By.cssSelector("[name='q']"));
         text.sendKeys("Amazon");
         text.submit();
@@ -68,6 +69,7 @@ public class validateSearchReturn {
 
         WebDriver navegator = new ChromeDriver();
         navegator.get("https://www.google.com/");
+        navegator.manage().window().maximize();
         WebElement text = navegator.findElement(By.cssSelector("[name='q']"));
         text.sendKeys("Amazon");
         text.submit();
